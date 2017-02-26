@@ -49,4 +49,8 @@ done < packages.txt
 
 echo "Updating repository database..."
 cd /build/repo
-repo-add --new mingw-w64.db.tar.gz *.pkg.*
+
+if [ -n "${GPGKEY}" ]; then
+    repoadd_args="-s -k \"${GPGKEY}\""
+fi
+repo-add ${repoadd_args} --new mingw-w64.db.tar.gz *.pkg.*
