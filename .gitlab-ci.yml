@@ -1,6 +1,26 @@
 stages:
+  - mirror
   - build
   - deploy
+
+Mirror to github:
+  stage: mirror
+
+  script:
+  - mkdir -p $HOME/.ssh
+  - echo "${GITHUB_DEPLOY_KEY}" > $HOME/.ssh/github
+  - chmod 0600 $HOME/.ssh/github
+  - mv $HOME/.ssh/config $HOME/.ssh/config~ || /bin/true
+  - echo "host github.com" > $HOME/.ssh/config
+  - echo "  IdentityFile %d/.ssh/github" >> $HOME/.ssh/config
+  - echo "  PubKeyAuthentication yes" >> $HOME/.ssh/config
+
+  - git remote add --mirror=push github git@github.com:${GITHUB_REPOSITORY} || /bin/true
+  - git push github
+
+  after_script:
+  - mv $HOME/.ssh/config~ $HOME/.ssh/config || /bin/true
+  - rm $HOME/.ssh/github
 
 Build master:
   stage: build
@@ -21,16 +41,18 @@ Build other:
   except:
   - master
 
-Push master to Docker Hub:
+# Note: to be friendly to Docker Hub, the auto-update on push is disabled in Docker hub.
+# The repository itself is mirrored to GitHub immediately on every push.
+Build branch on Docker Hub:
   stage: deploy
   script:
-  - docker push ${DOCKERHUB_USER}/${DOCKERHUB_REPO}:latest
-  only:
-  - master
-
-Push to Docker Hub:
-  stage: deploy
-  script:
-  - docker push ${DOCKERHUB_USER}/${DOCKERHUB_REPO}:${CI_BUILD_REF_NAME}
+  - 'curl -H "Content-Type: application/json" --data "{\"source_type\": \"Branch\", \"source_name\": \"${CI_BUILD_REF_NAME}\"}" -X POST https://registry.hub.docker.com/u/${DOCKERHUB_USER}/${DOCKERHUB_REPO}/trigger/${DOCKERHUB_TOKEN}/'
   except:
-  - master
+  - tags
+
+Build tag on Docker Hub:
+  stage: deploy
+  script:
+  - 'curl -H "Content-Type: application/json" --data "{\"source_type\": \"Tag\", \"source_name\": \"${CI_BUILD_REF_NAME}\"}" -X POST https://registry.hub.docker.com/u/${DOCKERHUB_USER}/${DOCKERHUB_REPO}/trigger/${DOCKERHUB_TOKEN}/'
+  except:
+  - branches
