@@ -30,7 +30,7 @@ while read pkg; do
         # Also remove 'needed' option; add --confirm to make sure we can explicitly answer 'yes' to conflict resolutions
         params="${params//--needed/} --force --confirm"
         doyes="1"
-        environment="NOCONFIRM=0 PU_NOCONFIRM=0"
+        environment="OVERRIDE_NOCONFIRM=0 OVERRIDE_PU_NOCONFIRM=0"
     fi
     # '^' means --nodeps
     if [[ "$pkg" =~ ^\*?\^ ]]; then

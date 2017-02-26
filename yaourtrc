@@ -43,10 +43,10 @@ EXPORTSRC=1        # Need EXPORT>0 to be used
 EXPORTDIR="/build/repo"       # If empty, use makepkg's configuration (see makepkg.conf)
 
 # Prompt
-NOCONFIRM=${NOCONFIRM:-1}
-UP_NOCONFIRM=${UP_NOCONFIRM:-1}       # No prompt while build upgrades (including -Sbu)
-BUILD_NOCONFIRM=${BUILD_NOCONFIRM:-1} # Only prompt for editing files
-PU_NOCONFIRM=${PU_NOCONFIRM:-1}       # Add --noconfirm to $PACMAN -U
+NOCONFIRM=${OVERRIDE_NOCONFIRM:-1}
+UP_NOCONFIRM=${OVERRIDE_UP_NOCONFIRM:-1}       # No prompt while build upgrades (including -Sbu)
+BUILD_NOCONFIRM=${OVERRIDE_BUILD_NOCONFIRM:-1} # Only prompt for editing files
+PU_NOCONFIRM=${OVERRIDE_PU_NOCONFIRM:-1}       # Add --noconfirm to $PACMAN -U
 EDITFILES=0
 NOENTER=1
 
