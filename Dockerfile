@@ -49,14 +49,13 @@ ADD makepkg.conf /etc/makepkg.conf
 
 # Prepare build dir
 # The update script...
-ADD update.sh /build
-ADD update-packages.sh /build
+ADD update.sh /build/
+ADD update-packages.sh /build/
 # Package list: run `yaourt -Ssqm mingw-w64` to update this
-ADD packages.txt /build
-ADD pubkeys.txt /build
+ADD packages.txt /build/
+ADD pubkeys.txt /build/
 
-RUN    mkdir -p /build \
-    && mkdir -p /build/repo \
+RUN    mkdir -p /build/repo \
     && chown -R build:build /build \
     && chmod +x /build/update.sh \
     && chmod +x /build/update-packages.sh
