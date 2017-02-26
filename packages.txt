@@ -1,5 +1,19 @@
+mingw-w64-configure
+mingw-w64-bzip2
+mingw-w64-zlib
 mingw-w64-freetype2-bootstrap
+mingw-w64-cairo-bootstrap
+mingw-w64-glib2
+mingw-w64-harfbuzz
+*mingw-w64-freetype2
+*mingw-w64-cairo
+*mingw-w64-glib2
+*mingw-w64-harfbuzz
+mingw-w64-x264-bootstrap
+mingw-w64-ffmpeg
+mingw-w64-x264
 cross-mingw-w64-gdb
+mingw-w64-adwaita-icon-theme
 mingw-w64-agrum
 mingw-w64-allegro
 mingw-w64-angleproject
@@ -19,10 +33,7 @@ mingw-w64-boost
 mingw-w64-boost-python
 mingw-w64-box2d
 mingw-w64-bullet
-mingw-w64-bzip2
 mingw-w64-c++utilities
-mingw-w64-cairo
-mingw-w64-cairo-bootstrap
 mingw-w64-cblas
 mingw-w64-ccnet
 mingw-w64-cgal
@@ -45,9 +56,7 @@ mingw-w64-coin-or-lemon
 mingw-w64-coin-or-osi
 mingw-w64-coin-or-qpoases
 mingw-w64-coin-or-vol
-mingw-w64-configure
 mingw-w64-cppunit
-mingw-w64-crt-git
 mingw-w64-curl
 mingw-w64-cximage
 mingw-w64-dbh
@@ -61,20 +70,18 @@ mingw-w64-enca
 mingw-w64-evince-light
 mingw-w64-exiv2
 mingw-w64-expat
-mingw-w64-exprtk-git
 mingw-w64-extra-cmake-modules
 mingw-w64-f2c
 mingw-w64-fann
-mingw-w64-ffmpeg
 mingw-w64-fftw
 mingw-w64-flac
 mingw-w64-flann
 mingw-w64-fmilib
 mingw-w64-fmipp
 mingw-w64-fontconfig
+mingw-w64-fpc
 mingw-w64-freeglut
 mingw-w64-freeimage
-mingw-w64-freetype2
 mingw-w64-fribidi
 mingw-w64-gdal
 mingw-w64-gdb
@@ -90,7 +97,6 @@ mingw-w64-giflib
 mingw-w64-glew
 mingw-w64-glfw
 mingw-w64-glib-networking
-mingw-w64-glib2
 mingw-w64-glpk
 mingw-w64-gmp
 mingw-w64-gnutls
@@ -99,6 +105,7 @@ mingw-w64-graphicsmagick
 mingw-w64-graphite
 mingw-w64-gsl
 mingw-w64-gsm
+mingw-w64-gst-editing-services
 mingw-w64-gst-libav
 mingw-w64-gst-plugins-bad
 mingw-w64-gst-plugins-base
@@ -109,10 +116,8 @@ mingw-w64-gstreamer
 mingw-w64-gtest
 mingw-w64-gtk2
 mingw-w64-gtk3
-mingw-w64-harfbuzz
 mingw-w64-harfbuzz-icu
 mingw-w64-hdf5
-mingw-w64-headers-git
 mingw-w64-hicolor-icon-theme
 mingw-w64-hidapi
 mingw-w64-hmat-oss
@@ -133,7 +138,6 @@ mingw-w64-kconfig
 mingw-w64-kcoreaddons
 mingw-w64-kcrash
 mingw-w64-kdbusaddons
-mingw-w64-kdreports-git
 mingw-w64-kdsoap
 mingw-w64-kglobalaccel
 mingw-w64-kguiaddons
@@ -180,6 +184,7 @@ mingw-w64-libgpg-error
 mingw-w64-libharu
 mingw-w64-libiconv
 mingw-w64-libidn
+mingw-w64-libidn2
 mingw-w64-libircclient
 mingw-w64-libjpeg
 mingw-w64-libjpeg-turbo
@@ -197,6 +202,7 @@ mingw-w64-libmpcdec
 mingw-w64-libogg
 mingw-w64-libpng
 mingw-w64-librsvg
+mingw-w64-librtmp0
 mingw-w64-libsamplerate
 mingw-w64-libsearpc
 mingw-w64-libsigc++
@@ -213,6 +219,7 @@ mingw-w64-libsvm
 mingw-w64-libtasn1
 mingw-w64-libtheora
 mingw-w64-libtiff
+mingw-w64-libtool
 mingw-w64-libuecc
 mingw-w64-libunistring
 mingw-w64-libusb
@@ -239,8 +246,8 @@ mingw-w64-mariadb-connector-c
 mingw-w64-mcfgthread
 mingw-w64-minizip
 mingw-w64-mlpack
-mingw-w64-mman-win32-svn
 mingw-w64-mpfr
+mingw-w64-mpg123
 mingw-w64-muparser
 mingw-w64-mygui
 mingw-w64-netcdf
@@ -272,6 +279,7 @@ mingw-w64-pango
 mingw-w64-passwordfile
 mingw-w64-passwordmanager
 mingw-w64-pcre
+mingw-w64-pcre2
 mingw-w64-pdcurses
 mingw-w64-pdcurses-win32a
 mingw-w64-physfs-hg
@@ -285,8 +293,8 @@ mingw-w64-postgresql
 mingw-w64-proj
 mingw-w64-protobuf
 mingw-w64-pugixml
-mingw-w64-python26-bin
-mingw-w64-python35-bin
+mingw-w64-python
+mingw-w64-python2
 mingw-w64-qcustomplot-qt5
 mingw-w64-qhull
 mingw-w64-qscintilla-qt4
@@ -349,7 +357,6 @@ mingw-w64-seafile-shared
 mingw-w64-sfml
 mingw-w64-smpeg
 mingw-w64-smpeg2
-mingw-w64-smtpclient-qt5-git
 mingw-w64-sonnet
 mingw-w64-speex
 mingw-w64-speexdsp
@@ -366,7 +373,6 @@ mingw-w64-threadweaver
 mingw-w64-tinyxml
 mingw-w64-tinyxml2
 mingw-w64-tools
-mingw-w64-uchardet-git
 mingw-w64-udis86
 mingw-w64-unshield
 mingw-w64-vid.stab
@@ -376,11 +382,8 @@ mingw-w64-vsqlite++
 mingw-w64-vtk
 mingw-w64-wavpack
 mingw-w64-win-iconv
-mingw-w64-winpthreads-git
 mingw-w64-wxmsw
 mingw-w64-wxmsw3.1
-mingw-w64-x264
-mingw-w64-x264-bootstrap
 mingw-w64-x265
 mingw-w64-xcb-proto
 mingw-w64-xerces-c
@@ -391,5 +394,4 @@ mingw-w64-xz
 mingw-w64-yajl
 mingw-w64-yaml-cpp
 mingw-w64-zeromq
-mingw-w64-zlib
 mingw-w64-zziplib
