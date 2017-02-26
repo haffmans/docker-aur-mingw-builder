@@ -30,7 +30,15 @@ RUN pacman -S --noconfirm --noprogressbar --needed \
         subversion \
         yajl \
         mingw-w64-toolchain \
-
+        python2 \
+        python \
+        cmake \
+        libpng \
+        dos2unix \
+        libxml2 \
+        setconf \
+        jsoncpp \
+        boost-libs \
     && (yes | pacman -Scc)
 
 # Create build user...
