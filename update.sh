@@ -40,5 +40,6 @@ while read pkg; do
     fi
 done < packages.txt
 
+echo "Updating repository database..."
 cd /build/repo
-repo-add --new mingw-w64 *.pkg.*
+repo-add --new mingw-w64.db.tar.gz *.pkg.*
