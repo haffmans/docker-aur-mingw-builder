@@ -7,7 +7,7 @@ To build the packages, start a terminal in the container and run update.sh.
 
     docker run --name aur-mingw-build haffmans/aur-mingw-builder:latest /build/update.sh
 
-The packages will end up in the /build/repo directory inside the container; the /build directory
+The packages will end up in the `/build/repo` directory inside the container; the `/build` directory
 is a Docker volume.
 
 Building will take a while but can be interrupted at any time. Just restart the container later
