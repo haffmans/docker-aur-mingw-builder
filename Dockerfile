@@ -16,7 +16,7 @@ RUN    pacman -Sy --noconfirm --noprogressbar archlinux-keyring \
     && pacman -Su --noconfirm --noprogressbar ca-certificates \
     && trust extract-compat \
     && pacman -Syyu --noconfirm --noprogressbar \
-    && (echo -e "y\ny\n" | pacman -Scc)
+    && (yes | pacman -Scc)
 
 RUN    echo "[multilib]" >> /etc/pacman.conf \
     && echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf \
@@ -30,8 +30,8 @@ RUN pacman -S --noconfirm --noprogressbar --needed \
         subversion \
         yajl \
         mingw-w64-toolchain \
-    && (echo -e "y\ny\n" | pacman -Scc)
 
+    && (yes | pacman -Scc)
 
 # Create build user...
 RUN useradd -m -d /build -u 1000 -U -G users,tty -s /bin/bash build
