@@ -21,3 +21,8 @@ A default package list is part of the image. To update this list inside the prev
     docker run --rm --volumes-from=aur-mingw-build haffmans/aur-mingw-builder:latest /build/update-packages.sh
 
 You can run this script outside the docker environment too, if you have yaourt installed.
+
+## Community keys
+
+This image contains a `pubkeys.txt` file which contains the public keys to be imported during the
+build. Each line contains a public key that will be imported using `sudo pacman-key -r <KEY>`.

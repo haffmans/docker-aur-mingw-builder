@@ -1,2 +1,1 @@
-build ALL=NOPASSWD: /usr/bin/makepkg
-build ALL=NOPASSWD: /usr/sbin/pacman
+build ALL=NOPASSWD: /usr/bin/makepkg, /usr/sbin/pacman, /usr/sbin/pacman-key

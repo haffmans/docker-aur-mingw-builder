@@ -4,6 +4,13 @@ function sanitize_name() {
     echo $1 | sed 's/\(!\|^[*\^]\{1,2\}\)//'
 }
 
+# Import keys
+awk '{ print $1; }' pubkeys.txt | while read key; do
+    sudo pacman-key -r $key
+    gpg --keyserver keys.gnupg.net --recv $key
+done
+
+# Install packages
 while read pkg; do
     params=""
     doyes="0"

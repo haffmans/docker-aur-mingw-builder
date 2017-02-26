@@ -53,6 +53,7 @@ ADD update.sh /build
 ADD update-packages.sh /build
 # Package list: run `yaourt -Ssqm mingw-w64` to update this
 ADD packages.txt /build
+ADD pubkeys.txt /build
 
 RUN    mkdir -p /build \
     && mkdir -p /build/repo \
