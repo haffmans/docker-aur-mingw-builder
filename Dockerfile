@@ -45,6 +45,7 @@ RUN pacman -S --noconfirm --noprogressbar --needed \
 RUN useradd -m -d /build -u 1000 -U -G users,tty -s /bin/bash build
 ADD sudoers-99_yaourt /etc/sudoers.d/99_yaourt
 ADD yaourtrc /etc/yaourtrc
+ADD makepkg.conf /etc/makepkg.conf
 
 # Prepare build dir
 # The update script...
