@@ -1,6 +1,9 @@
 mingw-w64-configure
+mingw-w64-crt
 mingw-w64-bzip2
 mingw-w64-zlib
+mingw-w64-xz
+mingw-w64-libjpeg-turbo
 mingw-w64-freetype2-bootstrap
 mingw-w64-cairo-bootstrap
 mingw-w64-glib2
@@ -12,6 +15,14 @@ mingw-w64-harfbuzz
 mingw-w64-x264-bootstrap
 mingw-w64-ffmpeg
 mingw-w64-x264
+mingw-w64-jasper
+mingw-w64-libtiff
+mingw-w64-pango
+mingw-w64-gdk-pixbuf2
+mingw-w64-libxml2
+mingw-w64-libcroco
+mingw-w64-librsvg
+mingw-w64-libiconv
 cross-mingw-w64-gdb
 mingw-w64-adwaita-icon-theme
 mingw-w64-agrum
@@ -86,7 +97,6 @@ mingw-w64-fribidi
 mingw-w64-gdal
 mingw-w64-gdb
 mingw-w64-gdbm
-mingw-w64-gdk-pixbuf2
 mingw-w64-geany
 mingw-w64-geographiclib
 mingw-w64-geos
@@ -128,7 +138,6 @@ mingw-w64-iistaskpanel
 mingw-w64-ilmbase
 mingw-w64-intel-tbb
 mingw-w64-jansson
-mingw-w64-jasper
 mingw-w64-json-glib
 mingw-w64-jsoncpp
 mingw-w64-karchive
@@ -164,7 +173,6 @@ mingw-w64-libatomic_ops
 mingw-w64-libbluray
 mingw-w64-libcmaes
 mingw-w64-libconfig
-mingw-w64-libcroco
 mingw-w64-libdvdcss
 mingw-w64-libdxfrw
 mingw-w64-libepoxy
@@ -182,12 +190,9 @@ mingw-w64-libgit2
 mingw-w64-libgnurx
 mingw-w64-libgpg-error
 mingw-w64-libharu
-mingw-w64-libiconv
 mingw-w64-libidn
 mingw-w64-libidn2
 mingw-w64-libircclient
-mingw-w64-libjpeg
-mingw-w64-libjpeg-turbo
 mingw-w64-libkate
 mingw-w64-liblo
 mingw-w64-libmicrohttpd
@@ -201,7 +206,6 @@ mingw-w64-libmpc
 mingw-w64-libmpcdec
 mingw-w64-libogg
 mingw-w64-libpng
-mingw-w64-librsvg
 mingw-w64-librtmp0
 mingw-w64-libsamplerate
 mingw-w64-libsearpc
@@ -218,7 +222,6 @@ mingw-w64-libssh2
 mingw-w64-libsvm
 mingw-w64-libtasn1
 mingw-w64-libtheora
-mingw-w64-libtiff
 mingw-w64-libtool
 mingw-w64-libuecc
 mingw-w64-libunistring
@@ -232,7 +235,6 @@ mingw-w64-libxau
 mingw-w64-libxcb
 mingw-w64-libxdiff
 mingw-w64-libxdmcp
-mingw-w64-libxml2
 mingw-w64-libxslt
 mingw-w64-libyaml
 mingw-w64-libzip
@@ -275,7 +277,6 @@ mingw-w64-opus
 mingw-w64-opusfile
 mingw-w64-orc
 mingw-w64-p11-kit
-mingw-w64-pango
 mingw-w64-passwordfile
 mingw-w64-passwordmanager
 mingw-w64-pcre
@@ -381,7 +382,6 @@ mingw-w64-vo-aacenc
 mingw-w64-vsqlite++
 mingw-w64-vtk
 mingw-w64-wavpack
-mingw-w64-win-iconv
 mingw-w64-wxmsw
 mingw-w64-wxmsw3.1
 mingw-w64-x265
@@ -390,7 +390,6 @@ mingw-w64-xerces-c
 mingw-w64-xorg-util-macros
 mingw-w64-xproto
 mingw-w64-xvidcore
-mingw-w64-xz
 mingw-w64-yajl
 mingw-w64-yaml-cpp
 mingw-w64-zeromq

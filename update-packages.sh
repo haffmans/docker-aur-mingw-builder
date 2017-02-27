@@ -6,8 +6,11 @@
 #             '!' to uninstall the package
 preinstall=(
     mingw-w64-configure
+    mingw-w64-crt
     mingw-w64-bzip2
     mingw-w64-zlib
+    mingw-w64-xz
+    mingw-w64-libjpeg-turbo
 
     mingw-w64-freetype2-bootstrap
     mingw-w64-cairo-bootstrap
@@ -21,6 +24,15 @@ preinstall=(
     mingw-w64-x264-bootstrap
     mingw-w64-ffmpeg
     mingw-w64-x264
+
+    mingw-w64-jasper
+    mingw-w64-libtiff
+    mingw-w64-pango
+    mingw-w64-gdk-pixbuf2
+    mingw-w64-libxml2
+    mingw-w64-libcroco
+    mingw-w64-librsvg
+    mingw-w64-libiconv
 )
 
 exclude=(
@@ -35,6 +47,9 @@ exclude=(
     ^mingw-w64-python33-bin$
     ^mingw-w64-python34-bin$
     ^mingw-w64-python35-bin$
+
+    mingw-w64-libjpeg
+    mingw-w64-win-iconv
 )
 
 function sanitize_name() {
