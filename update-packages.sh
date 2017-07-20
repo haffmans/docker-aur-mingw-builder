@@ -5,12 +5,13 @@
 #             '^' to ignore dependencies (Pacman --nodeps option) and
 #             '!' to uninstall the package
 preinstall=(
+    mingw-w64-pkg-config
     mingw-w64-configure
-    mingw-w64-crt
     mingw-w64-bzip2
     mingw-w64-zlib
     mingw-w64-xz
     mingw-w64-libjpeg-turbo
+    mingw-w64-icu
 
     mingw-w64-freetype2-bootstrap
     mingw-w64-cairo-bootstrap
